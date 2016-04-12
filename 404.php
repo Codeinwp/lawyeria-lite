@@ -26,9 +26,7 @@
 					<div class="post">
 						<div class="post-excerpt">
 							<?php
-							if ( get_theme_mod( 'lawyeria_lite_404_content','Oops, I screwed up and you discovered my fatal flaw. Well, we\'re not all perfect, but we try.  Can you try this again or maybe visit our <a title="themeIsle" href="'. home_url() .'">Home Page</a> to start fresh.  We\'ll do better next time.' ) ) {
-								echo get_theme_mod( 'lawyeria_lite_404_content','Oops, I screwed up and you discovered my fatal flaw. Well, we\'re not all perfect, but we try.  Can you try this again or maybe visit our <a title="themeIsle" href="'. home_url() .'">Home Page</a> to start fresh.  We\'ll do better next time.' );
-							}
+								echo get_theme_mod( 'lawyeria_lite_404_content', sprintf(__( 'Oops, I screwed up and you discovered my fatal flaw. Well, we\'re not all perfect, but we try. Can you try this again or maybe visit our %s to start fresh. We\'ll do better next time.', 'lawyeria-lite' ), '<a title="themeIsle" href="'. home_url() .'">'.__( 'Home Page', 'lawyeria-lite').'</a>' ) );
 							?>
 						</div><!--/.post-excerpt-->
 					</div><!--/div .post-->
