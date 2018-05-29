@@ -308,8 +308,11 @@ function lawyeria_lite_customizer( $wp_customize ) {
 		) );
 
 		/* 404 - Content */
+    function lawyeria_404_text() {
+        echo 'Oops, I screwed up and you discovered my fatal flaw. Well, we\'re not all perfect, but we try.  Can you try this again or maybe visit our <a href="'. home_url() .'">Home Page</a> to start fresh.  We\'ll do better next time.';
+    }
 		$wp_customize->add_setting( 'lawyeria_lite_404_content' ,
-        array('sanitize_callback' => 'lawyeria_lite_sanitize_text', 'default' => __( 'Oops, I screwed up and you discovered my fatal flaw. Well, we\'re not all perfect, but we try.  Can you try this again or maybe visit our <a title="themeIsle" href="'. home_url() .'">Home Page</a> to start fresh.  We\'ll do better next time.', 'lawyeria-lite' )));
+        array('sanitize_callback' => 'lawyeria_lite_sanitize_text', 'default' => __( 'lawyeria_404_text', 'lawyeria-lite' )));
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'lawyeria_lite_404_content', array(
 		            'label' 	=> __( '404 - Content', 'lawyeria-lite' ),
 		            'section' 	=> 'lawyeria_lite_404_section',

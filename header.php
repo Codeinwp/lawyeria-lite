@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta http-equiv="<?php echo get_template_directory_uri();?>/content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta charset="UTF-8">
-		<title><?php wp_title('|', true, 'right'); ?></title>
+
 
 		<!--[if lt IE 9]>
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
