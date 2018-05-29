@@ -52,6 +52,9 @@ function lawyeria_lite_theme_setup() {
 		);
 	add_theme_support( 'custom-header', $args );
 
+	/* Enable support for title-tag */
+	add_theme_support( 'title-tag' );
+
 }
 
 add_action( 'after_setup_theme', 'lawyeria_lite_theme_setup' );
@@ -74,13 +77,13 @@ function lawyeria_lite_slug_fonts_url() {
     * supported by Lora, translate this to 'off'. Do not translate
     * into your own language.
     */
-    $lato = _x( 'on', 'Lato font: on or off', 'zerif-lite' );
+    $lato = _x( 'on', 'Lato font: on or off', 'lawyeria-lite' );
 
    /* Translators: If there are characters in your language that are not
     * supported by Open Sans, translate this to 'off'. Do not translate
     * into your own language.
     */
-    $roboto = _x( 'on', 'Roboto font: on or off', 'zerif-lite' );
+    $roboto = _x( 'on', 'Roboto font: on or off', 'lawyeria-lite' );
  
     if ( 'off' !== $lato || 'off' !== $roboto ) {
         $font_families = array();
@@ -316,8 +319,8 @@ function lawyeria_lite_required_plugins() {
         ),
 
         array(
-            'name'      => 'WP Product Review',
-            'slug'      => 'wp-product-review',
+            'name'      => 'Orbit Fox',
+            'slug'      => 'themeisle-companion',
             'required'  => false,
         ),
     
